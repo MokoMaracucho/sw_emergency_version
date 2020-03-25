@@ -4,7 +4,7 @@ import java.util.UUID;
 
 import com.moko.sw_ev.sw_emergency_version.model.User;
 
-public interface userDao {
+public interface UserDao {
 
 	int insertUser(UUID idUser, User user);
 	
