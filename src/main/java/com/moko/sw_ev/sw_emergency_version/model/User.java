@@ -2,6 +2,8 @@ package com.moko.sw_ev.sw_emergency_version.model;
 
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class User {
 
 	private UUID idUser;
@@ -12,7 +14,13 @@ public class User {
 	private String occupationUser;
 	private Privilege privilegeUser;
 	
-	public User(UUID idUser, Gender genderUser, String firstNameUser, String lastNameUser, int ageUser, String occupationUser, Privilege privilegeUser) {
+	public User(@JsonProperty("idUtilisateur") UUID idUser, 
+				@JsonProperty("genderUser") Gender genderUser, 
+				@JsonProperty("firstNameUser") String firstNameUser, 
+				@JsonProperty("lastNameUser") String lastNameUser, 
+				@JsonProperty("ageUser") int ageUser, 
+				@JsonProperty("occupationUser") String occupationUser, 
+				@JsonProperty("privilegeUser") Privilege privilegeUser) {
 		this.idUser = idUser;
 		this.genderUser = genderUser;
 		this.firstNameUser = firstNameUser;
