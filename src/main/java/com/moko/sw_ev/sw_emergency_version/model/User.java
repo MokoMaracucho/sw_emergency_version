@@ -16,9 +16,9 @@ public class User {
 	@NotBlank
 	private String lastNameUser;
 	@NotBlank
-	private String emailUser;
-	@NotBlank
 	private int ageUser;
+	@NotBlank
+	private String emailUser;
 	@NotBlank
 	private String occupationUser;
 	@NotBlank
@@ -29,8 +29,8 @@ public class User {
 		@JsonProperty("genderUser") Gender genderUser,
 		@JsonProperty("firstNameUser") String firstNameUser,
 		@JsonProperty("lastNameUser") String lastNameUser,
-		@JsonProperty("emailUser") String emailUser,
 		@JsonProperty("ageUser") int ageUser,
+		@JsonProperty("emailUser") String emailUser,
 		@JsonProperty("occupationUser") String occupationUser,
 		@JsonProperty("privilegeUser") Privilege privilegeUser
 	) {
@@ -38,8 +38,8 @@ public class User {
 		this.genderUser = genderUser;
 		this.firstNameUser = firstNameUser;
 		this.lastNameUser = lastNameUser;
-		this.emailUser = emailUser;
 		this.ageUser = ageUser;
+		this.emailUser = emailUser;
 		this.occupationUser = occupationUser;
 		this.privilegeUser = privilegeUser;
 	}
@@ -75,14 +75,6 @@ public class User {
 	public void setLastNameUser(String lastNameUser) {
 		this.lastNameUser = lastNameUser;
 	}
-	
-	public String getEmailUser() {
-		return emailUser;
-	}
-
-	public void setEmailUser(String emailUser) {
-		this.emailUser = emailUser;
-	}
 
 	public int getAgeUser() {
 		return ageUser;
@@ -90,6 +82,14 @@ public class User {
 
 	public void setAgeUser(int ageUser) {
 		this.ageUser = ageUser;
+	}
+	
+	public String getEmailUser() {
+		return emailUser;
+	}
+
+	public void setEmailUser(String emailUser) {
+		this.emailUser = emailUser;
 	}
 
 	public String getOccupationUser() {

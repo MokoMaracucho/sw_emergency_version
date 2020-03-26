@@ -21,8 +21,8 @@ public class FakeUserDataAccessService implements UserDao {
 			user.getGenderUser(),
 			user.getFirstNameUser(),
 			user.getLastNameUser(),
-			user.getEmailUser(),
 			user.getAgeUser(),
+			user.getEmailUser(),
 			user.getOccupationUser(),
 			user.getPrivilegeUser()
 		));
@@ -61,8 +61,8 @@ public class FakeUserDataAccessService implements UserDao {
 					userToUpdate.getGenderUser(),
 					userToUpdate.getFirstNameUser(),
 					userToUpdate.getLastNameUser(),
-					userToUpdate.getEmailUser(),
 					userToUpdate.getAgeUser(),
+					userToUpdate.getEmailUser(),
 					userToUpdate.getOccupationUser(),
 					userToUpdate.getPrivilegeUser()
 				));

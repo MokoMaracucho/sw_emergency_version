@@ -1,6 +1,7 @@
 app:
   datasource:
-    jdbc-url: jdbc:postgres://localhost:5432/spring-boot-postgres-db
+    jdbc-url: jdbc:postgresql://localhost:5432/db_sw_ev
     username: postgres
     password: pasword
-    maximumPoolSize: 30 # pool-size : Amigos code
+    maximumPoolSize: 30
+    connectionTimeout: 20000
