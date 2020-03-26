@@ -16,14 +16,15 @@ public class FakeUserDataAccessService implements UserDao {
 	
 	@Override
 	public int insertUser(UUID idUser, User user) {
-		listAllUsers.add(new User(	idUser, 
-									user.getGenderUser(),
-									user.getFirstNameUser(),
-									user.getLastNameUser(),
-									user.getEmailUser(),
-									user.getAgeUser(),
-									user.getOccupationUser(),
-									user.getPrivilegeUser()
+		listAllUsers.add(new User(	
+			idUser, 
+			user.getGenderUser(),
+			user.getFirstNameUser(),
+			user.getLastNameUser(),
+			user.getEmailUser(),
+			user.getAgeUser(),
+			user.getOccupationUser(),
+			user.getPrivilegeUser()
 		));
 		return 1;
 	}

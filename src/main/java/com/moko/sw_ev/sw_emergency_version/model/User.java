@@ -2,17 +2,26 @@ package com.moko.sw_ev.sw_emergency_version.model;
 
 import java.util.UUID;
 
+import javax.validation.constraints.NotBlank;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class User {
 
 	private UUID idUser;
+	@NotBlank
 	private Gender genderUser;
+	@NotBlank
 	private String firstNameUser;
+	@NotBlank
 	private String lastNameUser;
+	@NotBlank
 	private String emailUser;
+	@NotBlank
 	private int ageUser;
+	@NotBlank
 	private String occupationUser;
+	@NotBlank
 	private Privilege privilegeUser;
 	
 	public User(

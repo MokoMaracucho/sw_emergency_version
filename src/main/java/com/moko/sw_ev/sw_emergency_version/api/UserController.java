@@ -3,7 +3,10 @@ package com.moko.sw_ev.sw_emergency_version.api;
 import java.util.List;
 import java.util.UUID;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,7 +31,7 @@ public class UserController {
 	}
 	
 	@PostMapping
-	public void addUser(@RequestBody User user) {
+	public void addUser( @Valid @NonNull @RequestBody User user) {
 		userService.addUser(user);
 	}
 	
@@ -49,7 +52,7 @@ public class UserController {
 	}
 	
 	@PutMapping(path= "{idUser}")
-	public void updateUtser(@PathVariable("idUser") UUID idUser, @RequestBody User user) {
+	public void updateUtser(@PathVariable("idUser") UUID idUser, @Valid @NonNull @RequestBody User user) {
 		userService.updateUserById(idUser,  user);
 	}
 }
