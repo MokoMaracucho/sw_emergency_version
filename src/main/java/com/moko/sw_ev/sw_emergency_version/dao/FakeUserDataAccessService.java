@@ -20,6 +20,7 @@ public class FakeUserDataAccessService implements UserDao {
 									user.getGenderUser(),
 									user.getFirstNameUser(),
 									user.getLastNameUser(),
+									user.getEmailUser(),
 									user.getAgeUser(),
 									user.getOccupationUser(),
 									user.getPrivilegeUser()
@@ -35,8 +36,8 @@ public class FakeUserDataAccessService implements UserDao {
 	@Override
 	public Optional<User> selectUserById(UUID idUser) {
 		return listAllUsers.stream()
-				.filter(user -> user.getIdUser().equals(idUser))
-				.findFirst();
+						.filter(user -> user.getIdUser().equals(idUser))
+						.findFirst();
 	}
 
 	@Override
@@ -55,14 +56,15 @@ public class FakeUserDataAccessService implements UserDao {
 			int indexOfUserToUpdate = listAllUsers.indexOf(user);
 			if(indexOfUserToUpdate >= 0) {
 				listAllUsers.set(indexOfUserToUpdate, new User(	
-						idUser, 
-						userToUpdate.getGenderUser(),
-						userToUpdate.getFirstNameUser(),
-						userToUpdate.getLastNameUser(),
-						userToUpdate.getAgeUser(),
-						userToUpdate.getOccupationUser(),
-						userToUpdate.getPrivilegeUser()
-					));
+					idUser, 
+					userToUpdate.getGenderUser(),
+					userToUpdate.getFirstNameUser(),
+					userToUpdate.getLastNameUser(),
+					userToUpdate.getEmailUser(),
+					userToUpdate.getAgeUser(),
+					userToUpdate.getOccupationUser(),
+					userToUpdate.getPrivilegeUser()
+				));
 				return true;
 			}
 			return false;

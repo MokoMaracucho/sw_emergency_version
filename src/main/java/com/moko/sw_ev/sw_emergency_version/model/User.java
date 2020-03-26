@@ -10,21 +10,26 @@ public class User {
 	private Gender genderUser;
 	private String firstNameUser;
 	private String lastNameUser;
+	private String emailUser;
 	private int ageUser;
 	private String occupationUser;
 	private Privilege privilegeUser;
 	
-	public User(@JsonProperty("idUtilisateur") UUID idUser, 
-				@JsonProperty("genderUser") Gender genderUser, 
-				@JsonProperty("firstNameUser") String firstNameUser, 
-				@JsonProperty("lastNameUser") String lastNameUser, 
-				@JsonProperty("ageUser") int ageUser, 
-				@JsonProperty("occupationUser") String occupationUser, 
-				@JsonProperty("privilegeUser") Privilege privilegeUser) {
+	public User(
+		@JsonProperty("idUtilisateur") UUID idUser,
+		@JsonProperty("genderUser") Gender genderUser,
+		@JsonProperty("firstNameUser") String firstNameUser,
+		@JsonProperty("lastNameUser") String lastNameUser,
+		@JsonProperty("emailUser") String emailUser,
+		@JsonProperty("ageUser") int ageUser,
+		@JsonProperty("occupationUser") String occupationUser,
+		@JsonProperty("privilegeUser") Privilege privilegeUser
+	) {
 		this.idUser = idUser;
 		this.genderUser = genderUser;
 		this.firstNameUser = firstNameUser;
 		this.lastNameUser = lastNameUser;
+		this.emailUser = emailUser;
 		this.ageUser = ageUser;
 		this.occupationUser = occupationUser;
 		this.privilegeUser = privilegeUser;
@@ -60,6 +65,14 @@ public class User {
 
 	public void setLastNameUser(String lastNameUser) {
 		this.lastNameUser = lastNameUser;
+	}
+	
+	public String getEmailUser() {
+		return emailUser;
+	}
+
+	public void setEmailUser(String emailUser) {
+		this.emailUser = emailUser;
 	}
 
 	public int getAgeUser() {
